@@ -6,6 +6,7 @@ from time import sleep
 from pathlib import Path
 
 import requests
+import requests_cache
 
 """TODO:
     - Save all results to a mongo database
@@ -13,6 +14,9 @@ import requests
     - Parse all replays
     - Store all replay data in separate mongo database
 """
+
+requests_cache.install_cache('replay_requests')
+
 
 def save(file_url):
     if file_url is None:
@@ -63,9 +67,9 @@ def main():
 
         for f in r.json().get('results', []):
             file_url = f.get('file', None)
-            f_r = save(file_url)
-            if f_r is False:
-                print(f"Failed to retrieve {file_url}")
+            # f_r = save(file_url)
+            # if f_r is False:
+                # print(f"Failed to retrieve {file_url}")
 
         next_url = r.json().get('next', False)
 
