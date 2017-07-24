@@ -29,6 +29,7 @@ def save(file_url):
 
 def main():
     delay = 0.5
+    count = 1
     url = "https://www.rocketleaguereplays.com/api/replays/"
     r = requests.get(url)
     
@@ -43,6 +44,8 @@ def main():
 
     next_url = r.json().get('next', False)
     while next_url is not False:
+        print("Page ", count)
+        count += 1
         r = requests.get(next_url)
         while not r.ok:
             if delay > 1800:
