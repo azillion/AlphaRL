@@ -7,6 +7,13 @@ from pathlib import Path
 
 import requests
 
+"""TODO:
+    - Save all results to a mongo database
+    - Retrieve all replays
+    - Parse all replays
+    - Store all replay data in separate mongo database
+"""
+
 def save(file_url):
     if file_url is None:
         return False
