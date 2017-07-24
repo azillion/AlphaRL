@@ -12,6 +12,8 @@ def save(file_url):
         return False
     try:
         path = Path("encoded").resolve()
+        file_name = file_url.replace("https://media.rocketleaguereplays.com/uploads/replay_files/", "")
+        path = path / file_name
         r = requests.get(file_url, stream=True)
 
         if not r.ok:
@@ -54,7 +56,7 @@ def main():
             f_r = save(file_url)
             if f_r is False:
                 print(f"Failed to retrieve {file_url}")
-                
+
         next_url = r.json().get('next', False)
 
 
