@@ -1,5 +1,4 @@
- #!/usr/bin/env python3
-
+#!/usr/bin/env python3
 import json
 from sys import exit
 from time import sleep
