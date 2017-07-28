@@ -3,10 +3,26 @@ AlphaRL is a narrow AI computer program that plays the video game Rocket League.
 
 
 ## TODO:
-    - Save all results to a mongo database
-    - Retrieve all replays
-    - Parse all replays
-    - Store all replay data in separate mongo database
+    * get data
+    * import data
+    * process/clean data
+    * build nn1
+    * train nn1
+    * bakkesmod for gamestate info
+    * controller ability 
+    * test nn1
+    * write simulation engine (bakkesmod as reference) 
+    * mcmc function
+    * build nn2
+    * train nn2 through self play
+    * iterate though parameter sets and train more
+    * combine nn1, nn2 and mcmc
+    * consider synapses reduced plasticity
+    * consider imagination
+    * train with gce 
+    * test ingame vs bots
+    * test ingame in quick play
+    * test in ranked play
 
 
 Legal Disclaimer

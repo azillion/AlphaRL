@@ -102,3 +102,7 @@ ENV/
 
 # c9
 .c9
+
+# Project
+encoded/
+parsed/

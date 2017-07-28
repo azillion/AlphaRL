@@ -8,6 +8,13 @@ from pathlib import Path
 import requests
 import requests_cache
 
+from replays.mongo import get_mongo
+from replays.models import get_version
+from replays.save import save
+
+db = get_mongo()
+models = get_version(1)
+
 """TODO:
     - Save all results to a mongo database
     - Retrieve all replays
@@ -17,26 +24,6 @@ import requests_cache
 
 requests_cache.install_cache('replay_requests')
 
-
-def save(file_url):
-    if file_url is None:
-        return False
-    try:
-        path = Path("encoded").resolve()
-        file_name = file_url.replace("https://media.rocketleaguereplays.com/uploads/replay_files/", "")
-        path = path / file_name
-        r = requests.get(file_url, stream=True)
-
-        if not r.ok:
-            r.raise_for_status()
-
-        with open(path, 'wb') as file:
-            for block in r.iter_content(2000):
-                file.write(block)
-        return True
-    except Exception as e:
-        print(e)
-        return False
 
 def main():
     delay = 0.5
@@ -49,9 +36,9 @@ def main():
 
     for f in r.json().get('results', []):
         file_url = f.get('file', None)
-        f_r = save(file_url)
-        if f_r is False:
-            print(f"Failed to retrieve {file_url}")
+        # f_r = save(file_url)
+        # if f_r is False:
+            # print(f"Failed to retrieve {file_url}")
 
     next_url = r.json().get('next', False)
     while next_url is not False:
