@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
-from mongoengine import Document, Stringfield, ListField, IntField, DateTimeField
+from mongoengine import Document, StringField, ListField, IntField, DateTimeField
 
 
 class Index(Document):
     """Replay Index"""
-    pid = IntField(db_field="pid", required=True)
+    pid = IntField(db_field="pid", required=True, unique=True)
     
-    replay_id = StringField(db_field="replayId", required=True)
+    replay_id = StringField(db_field="replayId", required=True, unique=True)
     
-    url = StringField(db_field="url", required=True)
+    url = StringField(db_field="url", required=True, unique=True)
     
-    file_url = StringField(db_field="fileUrl", required=True)
+    file_url = StringField(db_field="fileUrl", required=True, unique=True)
     
     fps = IntField(db_field="fps", required=True)
     
-    num_frames = IntField(db_field="numFrames", required=True)
+    num_frames = IntField(db_field="numFrames")
     
-    map_name = StringField(db_field="mapName", required=True)
+    map_name = StringField(db_field="mapName")
     
-    match_type = StringField(db_field="matchType", required=True)
+    match_type = StringField(db_field="matchType")
     
-    season = IntField(db_field="season", required=True)
+    season = IntField(db_field="season")
     
     excitement_factor = IntField(db_field="excitementFactor")
     
@@ -28,5 +28,5 @@ class Index(Document):
     
     shot_data = StringField(db_field="shotData")
     
-    date_created = DateTimeField(db_field="dateCreated", required=True)
+    date_created = DateTimeField(db_field="dateCreated")
     

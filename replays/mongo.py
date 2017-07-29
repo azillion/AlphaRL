@@ -14,10 +14,15 @@ _DEFAULT_MONGO_DB = 'ReplayIndex'
 def create_mongo(mongo_host: str, mongo_db: str):
     """Create the mongo connection"""
     mongo_ip = gethostbyname(mongo_host)
+    mongo_user = environ["MONGO_USERNAME"]
+    mongo_pass = environ["MONGO_PASS"]
     print(f"Mongo IP: {mongo_ip}")
     print(f"Mongo Host: {mongo_host}")
     print(f"Mongo Database: {mongo_db}")
-    return connect(mongo_db, host=mongo_ip)
+    print(f"Mongo Username: {mongo_user}")
+    return connect(mongo_db, host=mongo_ip, \
+                    username=mongo_user, password=mongo_pass, authentication_source="admin")
+    
 
 
 def get_mongo():

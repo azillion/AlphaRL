@@ -5,8 +5,8 @@ from pathlib import Path
 import requests
 import requests_cache
 
-from replays.mongo import get_mongo
-from replays.models import get_version
+from mongo import get_mongo
+from models import get_version
 
 db = get_mongo()
 models = get_version(1)
