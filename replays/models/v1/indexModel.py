@@ -31,7 +31,9 @@ class Index(Document):
     date_created = DateTimeField(db_field="dateCreated")
 
     downloaded = BooleanField(db_field="downloaded", default=False)
-
+    
     encoded_file_path = StringField(db_field="encodedFilePath")
-
+    
     parsed_file_path = StringField(db_field="parsedFilePath")
+
+    converted = BooleanField(db_field="converted", default=False)

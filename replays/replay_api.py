@@ -21,8 +21,8 @@ requests_cache.install_cache('replay_requests')
 
 def main():
     delay = 0.5
-    count = 3999
-    url = "https://www.rocketleaguereplays.com/api/replays/?page=3999"
+    count = 0
+    url = "https://www.rocketleaguereplays.com/api/replays/?page=0"
     r = requests.get(url)
     
     if not r.ok:
