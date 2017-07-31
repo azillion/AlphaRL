@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from mongoengine import Document, StringField, ListField, IntField, DateTimeField
+from mongoengine import Document, StringField, BooleanField, IntField, DateTimeField
 
 
 class Index(Document):
@@ -29,4 +29,9 @@ class Index(Document):
     shot_data = StringField(db_field="shotData")
     
     date_created = DateTimeField(db_field="dateCreated")
-    
+
+    downloaded = BooleanField(db_field="downloaded", default=False)
+
+    encoded_file_path = StringField(db_field="encodedFilePath")
+
+    parsed_file_path = StringField(db_field="parsedFilePath")
