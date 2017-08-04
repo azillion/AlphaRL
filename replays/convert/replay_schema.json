@@ -1,0 +1,1505 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "header": {
+      "type": "object",
+      "properties": {
+        "patch_version": {
+          "type": "number"
+        },
+        "engine_version": {
+          "type": "number"
+        },
+        "licensee_version": {
+          "type": "number"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "keys": {
+              "type": "array",
+              "items": {
+                "required": [],
+                "properties": {}
+              }
+            },
+            "last_key": {
+              "type": "string",
+              "minLength": 1
+            },
+            "value": {
+              "type": "object",
+              "properties": {
+                "BuildID": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "BuildVersion": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "str_property": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "str_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "Changelist": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "Date": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "str_property": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "str_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "GameVersion": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "Goals": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "array_property": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "last_key"
+                            ],
+                            "properties": {
+                              "keys": {
+                                "type": "array",
+                                "items": {
+                                  "required": [],
+                                  "properties": {}
+                                }
+                              },
+                              "last_key": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "value": {
+                                "type": "object",
+                                "properties": {
+                                  "PlayerName": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "str_property": {
+                                            "type": "string",
+                                            "minLength": 1
+                                          }
+                                        },
+                                        "required": [
+                                          "str_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "PlayerTeam": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "frame": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "PlayerName",
+                                  "PlayerTeam",
+                                  "frame"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "array_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "HighLights": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "array_property": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "last_key"
+                            ],
+                            "properties": {
+                              "keys": {
+                                "type": "array",
+                                "items": {
+                                  "required": [],
+                                  "properties": {}
+                                }
+                              },
+                              "last_key": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "value": {
+                                "type": "object",
+                                "properties": {
+                                  "BallName": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "name_property": {
+                                            "type": "string",
+                                            "minLength": 1
+                                          }
+                                        },
+                                        "required": [
+                                          "name_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "CarName": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "name_property": {
+                                            "type": "string",
+                                            "minLength": 1
+                                          }
+                                        },
+                                        "required": [
+                                          "name_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "frame": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "BallName",
+                                  "CarName",
+                                  "frame"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "array_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "Id": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "str_property": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "str_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "KeyframeDelay": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "float_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "float_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "MapName": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "name_property": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "name_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "MatchType": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "name_property": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "name_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "MaxChannels": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "MaxReplaySizeMB": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "NumFrames": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "PlayerName": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "str_property": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "str_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "PlayerStats": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "array_property": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "last_key"
+                            ],
+                            "properties": {
+                              "keys": {
+                                "type": "array",
+                                "items": {
+                                  "required": [],
+                                  "properties": {}
+                                }
+                              },
+                              "last_key": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "value": {
+                                "type": "object",
+                                "properties": {
+                                  "Assists": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "Goals": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "Name": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "str_property": {
+                                            "type": "string",
+                                            "minLength": 1
+                                          }
+                                        },
+                                        "required": [
+                                          "str_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "OnlineID": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "q_word_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "q_word_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "Platform": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "byte_property": {
+                                            "type": "array",
+                                            "items": {
+                                              "required": [],
+                                              "properties": {}
+                                            }
+                                          }
+                                        },
+                                        "required": [
+                                          "byte_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "Saves": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "Score": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "Shots": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "Team": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "int_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "int_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  },
+                                  "bBot": {
+                                    "type": "object",
+                                    "properties": {
+                                      "kind": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "size": {
+                                        "type": "number"
+                                      },
+                                      "value": {
+                                        "type": "object",
+                                        "properties": {
+                                          "bool_property": {
+                                            "type": "number"
+                                          }
+                                        },
+                                        "required": [
+                                          "bool_property"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "kind",
+                                      "size",
+                                      "value"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "Assists",
+                                  "Goals",
+                                  "Name",
+                                  "OnlineID",
+                                  "Platform",
+                                  "Saves",
+                                  "Score",
+                                  "Shots",
+                                  "Team",
+                                  "bBot"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "array_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "RecordFPS": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "float_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "float_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "ReplayVersion": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "Team0Score": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "Team1Score": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                },
+                "TeamSize": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "int_property": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "int_property"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "size",
+                    "value"
+                  ]
+                }
+              },
+              "required": [
+                "BuildID",
+                "BuildVersion",
+                "Changelist",
+                "Date",
+                "GameVersion",
+                "Goals",
+                "HighLights",
+                "Id",
+                "KeyframeDelay",
+                "MapName",
+                "MatchType",
+                "MaxChannels",
+                "MaxReplaySizeMB",
+                "NumFrames",
+                "PlayerName",
+                "PlayerStats",
+                "RecordFPS",
+                "ReplayVersion",
+                "Team0Score",
+                "Team1Score",
+                "TeamSize"
+              ]
+            }
+          },
+          "required": [
+            "keys",
+            "last_key",
+            "value"
+          ]
+        }
+      },
+      "required": [
+        "patch_version",
+        "engine_version",
+        "licensee_version",
+        "label",
+        "properties"
+      ]
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "levels": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        },
+        "key_frames": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "time",
+              "frame",
+              "position"
+            ],
+            "properties": {
+              "time": {
+                "type": "number"
+              },
+              "frame": {
+                "type": "number"
+              },
+              "position": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "stream_size": {
+          "type": "number"
+        },
+        "frames": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "time",
+              "delta"
+            ],
+            "properties": {
+              "time": {
+                "type": "number"
+              },
+              "delta": {
+                "type": "number"
+              },
+              "replications": {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": {
+                  "required": [],
+                  "properties": {
+                    "actor_id": {
+                      "type": "object",
+                      "properties": {
+                        "limit": {
+                          "type": "number"
+                        },
+                        "value": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "limit",
+                        "value"
+                      ]
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "spawned_replication_value": {
+                          "type": "object",
+                          "properties": {
+                            "name_index": {
+                              "type": "number"
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "flag": {
+                              "type": "boolean"
+                            },
+                            "object_id": {
+                              "type": "number"
+                            },
+                            "object_name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "class_name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "initialization": {
+                              "type": "object",
+                              "properties": {
+                                "location": {
+                                  "type": "object",
+                                  "properties": {
+                                    "bias": {
+                                      "type": "number"
+                                    },
+                                    "x": {
+                                      "type": "number"
+                                    },
+                                    "y": {
+                                      "type": "number"
+                                    },
+                                    "z": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "bias",
+                                    "x",
+                                    "y",
+                                    "z"
+                                  ]
+                                },
+                                "rotation": {
+                                  "type": "object",
+                                  "properties": {},
+                                  "required": []
+                                }
+                              },
+                              "required": [
+                                "location",
+                                "rotation"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "name_index",
+                            "name",
+                            "flag",
+                            "object_id",
+                            "object_name",
+                            "class_name",
+                            "initialization"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "spawned_replication_value"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        },
+        "marks": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "value",
+              "frame"
+            ],
+            "properties": {
+              "value": {
+                "type": "string",
+                "minLength": 1
+              },
+              "frame": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "packages": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        },
+        "names": {
+          "type": "array",
+          "items": {
+            "required": [],
+            "properties": {}
+          }
+        },
+        "class_mappings": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "name",
+              "stream_id"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stream_id": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "caches": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "class_id",
+              "parent_cache_id",
+              "cache_id"
+            ],
+            "properties": {
+              "class_id": {
+                "type": "number"
+              },
+              "parent_cache_id": {
+                "type": "number"
+              },
+              "cache_id": {
+                "type": "number"
+              },
+              "attribute_mappings": {
+                "type": "array",
+                "items": {
+                  "required": [],
+                  "properties": {}
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "levels",
+        "key_frames",
+        "stream_size",
+        "frames",
+        "messages",
+        "marks",
+        "packages",
+        "objects",
+        "names",
+        "class_mappings",
+        "caches"
+      ]
+    }
+  },
+  "required": [
+    "header",
+    "content"
+  ]
+}
